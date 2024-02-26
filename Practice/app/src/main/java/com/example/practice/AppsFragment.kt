@@ -17,6 +17,12 @@ class AppsFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_apps, container, false)
     }
+    override fun onResume() {
+        super.onResume()
+        // Update action bar title
+        activity?.title = "Apps"
+        // You can also customize other action bar properties here
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         items= arrayOf(

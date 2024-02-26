@@ -17,6 +17,8 @@
         android:text="@string/bottom_sheet"
         android:id="@+id/btm_sheet"/>
 
+
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -29,5 +31,6 @@
         android:id="@+id/btm_navigation"
         app:menu="@menu/items"
         />
+
 
 </LinearLayout>

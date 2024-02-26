@@ -22,6 +22,12 @@ class MessageFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_message, container, false)
     }
+    override fun onResume() {
+        super.onResume()
+        // Update action bar title
+        activity?.title = "Chats"
+        // You can also customize other action bar properties here
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

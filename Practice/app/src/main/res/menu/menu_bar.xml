@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:id="@+id/like"
+        android:title="Like"
+        android:icon="@drawable/profile"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/first"
+        app:showAsAction="never"
+        android:title="First"
+        />
+    <item android:id="@+id/second"
+        app:showAsAction="never"
+        android:title="Second"
+        />
+    <item android:id="@+id/third"
+        app:showAsAction="never"
+        android:title="Third"
+        />
+</menu>

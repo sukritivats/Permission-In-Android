@@ -14,4 +14,10 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
+    override fun onResume() {
+        super.onResume()
+        // Update action bar title
+        activity?.title = "Home"
+        // You can also customize other action bar properties here
+    }
 }

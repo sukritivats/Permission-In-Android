@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FragmentsFile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="fragment_1">Fragment 1</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string name="msg_from_fragment_1">msg from fragment 1</string>
+    <string name="msg_for_fragment_1">msg for fragment 1</string>
+    <string name="send_data">Send data</string>
+    <string name="fragment_11">Fragment 1</string>
+    <string name="msg_from_fragment_2">msg from fragment 2</string>
+    <string name="msg_for_fragment_2">msg for fragment 2</string>
+    <string name="f1">F1</string>
+    <string name="f2">F2</string>
+    <string name="send_to_activity">Send to activity</string>
+    <string name="send_to_f2">Send to F2</string>
+    <string name="send_to_f1">Send to F1</string>
+    <string name="msg_from_fragment">Msg from fragment</string>
+</resources>

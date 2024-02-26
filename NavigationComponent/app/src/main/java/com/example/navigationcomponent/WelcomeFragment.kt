@@ -23,7 +23,6 @@ class WelcomeFragment : Fragment() {
         binding.signup.setOnClickListener {
             it.findNavController().navigate(R.id.action_welcomeFragment_to_signupFragment)
         }
-
         return binding.root
     }
 
