@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Quizzify</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="question_australia">Canberra is the capital of Australia.</string>
+    <string name="question_oceans">The Pacific Ocean is larger than
+the Atlantic Ocean.</string>
+    <string name="question_mideast">Is mokama capital of bihar?</string>
+    <string name="question_africa">I know web dev</string>
+    <string name="question_americas">The Amazon River is the longest river
+in the Americas.</string>
+    <string name="question_asia">Lake Baikal is the world\'s oldest and deepest
+freshwater lake.</string>
+    <string name="correct_toast">correct\n</string>
+    <string name="incorrect_toast">wrong\n</string>
+</resources>
