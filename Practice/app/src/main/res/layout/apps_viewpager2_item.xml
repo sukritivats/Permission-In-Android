@@ -4,11 +4,10 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/view_pager_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/pc1"
-        android:id="@+id/view_pager_img"
-        />
+        android:src="@drawable/pc1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

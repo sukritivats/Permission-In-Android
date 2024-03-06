@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Coroutines"
         tools:targetApi="31">
         <activity
+            android:name=".SharedPreference"
+            android:exported="false" />
+        <activity
+            android:name=".DataStore"
+            android:exported="false" />
+        <activity
             android:name=".SyncAndLaunch"
             android:exported="false" />
         <activity

@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">List view</string>
-    <string name="assigned_task">Assigned Task</string>
-    <string name="when">When?</string>
-    <string name="choose_field">choose field</string>
-</resources>

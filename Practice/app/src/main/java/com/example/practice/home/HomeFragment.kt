@@ -1,4 +1,4 @@
-package com.example.practice
+package com.example.practice.home
 
 import android.content.Context
 import android.os.Bundle
@@ -6,13 +6,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.practice.databinding.FragmentHomeBinding
+import com.example.practice.R
 import com.example.practice.databinding.FragmentHomeContentBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 

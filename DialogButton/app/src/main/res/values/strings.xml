@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Dialog Button</string>
-    <string name="alertdialog">AlertDialog</string>
-    <string name="snackbar">SnackBar</string>
-</resources>

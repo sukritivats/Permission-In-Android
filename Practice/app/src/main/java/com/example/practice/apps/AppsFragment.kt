@@ -1,12 +1,12 @@
-package com.example.practice
+package com.example.practice.apps
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.example.practice.R
 import com.example.practice.databinding.FragmentAppsBinding
 
 class AppsFragment : Fragment() {

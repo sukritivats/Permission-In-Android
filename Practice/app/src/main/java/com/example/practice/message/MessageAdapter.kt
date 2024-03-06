@@ -1,24 +1,23 @@
-package com.example.practice
+package com.example.practice.message
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.imageview.ShapeableImageView
+import com.example.practice.R
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.Collections
 
 class MessageAdapter(private val messageList: ArrayList<MessageData>)
     :RecyclerView.Adapter<MessageAdapter.MyViewHolder>(){
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val msgView = LayoutInflater.from(parent.context).inflate(R.layout.message_each_item,parent,false)
         return MyViewHolder(msgView)
     }
-    override fun onBindViewHolder(holder: MessageAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentMsg = messageList[position]
         holder.imageHolder.setImageResource(currentMsg.imageData)
         holder.aboutHolder.text= currentMsg.aboutData

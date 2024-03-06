@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.ColorPicker" parent="Base.Theme.ColorPicker" />
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@layout/fragment_splash</item>
+    </style>
 </resources>

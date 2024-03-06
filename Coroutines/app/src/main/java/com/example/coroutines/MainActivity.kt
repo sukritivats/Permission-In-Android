@@ -1,12 +1,15 @@
 package com.example.coroutines
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
+import com.example.coroutines.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -25,14 +28,23 @@ import kotlin.math.log
 class MainActivity : AppCompatActivity() {
 
     private lateinit var counterText:TextView
+    var binding:ActivityMainBinding?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding=ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
 
         GlobalScope.launch(Dispatchers.Main) {
              function()
         }
+        binding?.btnDataStore?.setOnClickListener {
+            startActivity(Intent(this,DataStore::class.java))
+        }
+        binding?.btnSharedPreference?.setOnClickListener {
+            startActivity(Intent(this,SharedPreference::class.java))
+        }
+
 
     }
 
