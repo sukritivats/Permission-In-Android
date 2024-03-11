@@ -56,7 +56,21 @@ class SecondActivity : AppCompatActivity() {
                 ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CALL_PHONE),0)
             }
         }
+
+        binding?.btnLocation?.setOnClickListener(){
+            if(checkLocationPermission())
+                openGoogleMaps()
+            else
+            {
+                ActivityCompat.requestPermissions(this,
+                    arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+                    0)
+            }
+        }
     }
+
+    // call permissions
+
     private fun checkCallPermission():Boolean{
         return ActivityCompat.checkSelfPermission(this,android.Manifest.permission.CALL_PHONE)==PackageManager.PERMISSION_GRANTED
     }
@@ -77,6 +91,25 @@ class SecondActivity : AppCompatActivity() {
             Toast.makeText(this, "No app to handle call action", Toast.LENGTH_SHORT).show()
         }
     }
+
+    // location permission
+
+    private fun checkLocationPermission():Boolean{
+        return ActivityCompat.checkSelfPermission(this,
+            android.Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun openGoogleMaps() {
+        val latitude = 37.7749
+        val longitude = -122.4194
+
+        val gmmIntentUri: Uri = Uri.parse("geo:$latitude,$longitude")
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        mapIntent.setPackage("com.google.android.apps.maps")
+        startActivity(mapIntent)
+    }
+
+    // pdf file
 
     private fun pickPdfFile() {
         pickPdfLauncher.launch(Intent(Intent.ACTION_GET_CONTENT).apply {
@@ -113,6 +146,9 @@ class SecondActivity : AppCompatActivity() {
     // Load the PDF file into the WebView
     webView.loadUrl("file:///android_asset/pdfviewer/viewer.html?file=$pdfUri")
     }
+
+
+
 
 
 }
