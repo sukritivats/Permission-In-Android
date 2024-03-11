@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.practice.apps.AppsFragment
 import com.example.practice.databinding.ActivityMainBinding
 import com.example.practice.home.HomeFragment
@@ -13,16 +14,16 @@ class MainActivity : AppCompatActivity() {
 
     private var binding: ActivityMainBinding? = null
 
-//    val navController by lazy { findNavController(R.id.fragmentContainerView2) }
+    val navController by lazy { findNavController(R.id.fragmentContainerView2) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        clickBottomItems()
+//        clickBottomItems()
 
-        replaceFragments(HomeFragment())
+//        replaceFragments(HomeFragment())
     }
 
 //    override fun onSupportNavigateUp(): Boolean {

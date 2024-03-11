@@ -18,26 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-        // clickHandler()
         calculation()
-        setSPinner()
-    }
-
-    private fun setSPinner() {
-
-        val adapter = ArrayAdapter(
-            this,
-            android.R.layout.simple_spinner_dropdown_item,
-            arrayOf(
-                "Manish", "Apoorva", "Sidrajit"
-            )
-        )
-
-        binding?.spinner?.setOnItemClickListener { parent, view, position, id ->
-
-        }
-
-        binding?.spinner?.adapter = adapter
     }
 
     private fun clear() {
@@ -51,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun clearLastDigit() {
         if (!isOperandClicked) {
-            if (numberOne.isNotEmpty()) { // Check if numberOne is not empty before clearing
-                numberOne = numberOne.dropLast(1) // Remove the last character from numberOne
+            if (numberOne.isNotEmpty()) {
+                numberOne = numberOne.dropLast(1)
                 binding?.input?.text = numberOne
             }
         } else {
@@ -252,23 +233,6 @@ class MainActivity : AppCompatActivity() {
             binding?.output?.text = result.toString()
         }
     }
-
-//    private fun clickHandler() {
-//
-//        binding?.btnZero?.setOnClickListener {
-//            startActivity(Intent(this, FormActivity::class.java).apply {
-//                putExtra("name", "Manish")
-//                putExtra("age", 10)
-//            })
-//        }
-
-    /*        binding?.eq?.setOnClickListener {
-
-            }
-
-            binding?.b0?.setOnClickListener {
-
-            }*/
 }
 
 

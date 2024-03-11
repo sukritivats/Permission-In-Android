@@ -13,7 +13,7 @@ class AppsFragment : Fragment() {
     private var binding: FragmentAppsBinding? = null
     private val items: Array<Int> by lazy {
         arrayOf(
-            R.drawable.pc6,
+            R.drawable.pc5,
             R.drawable.pc1,
             R.drawable.pc3,
             R.drawable.pc4,
@@ -21,6 +21,7 @@ class AppsFragment : Fragment() {
             R.drawable.pc2
         )
     }
+
     private val appList: ArrayList<AppsGridData> by lazy { arrayListOf() }
 
     override fun onCreateView(

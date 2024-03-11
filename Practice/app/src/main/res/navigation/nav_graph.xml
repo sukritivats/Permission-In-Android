@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/demoMenu">
 
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.practice.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_fragmentApp1"
             app:destination="@id/fragmentApp1" />
@@ -20,4 +20,8 @@
         android:name="com.example.practice.apps.FragmentApp1"
         android:label="fragment_app1"
         tools:layout="@layout/fragment_app1" />
+    <fragment
+        android:id="@+id/demoMenu"
+        android:name="com.example.practice.demo.DemoMenu"
+        android:label="DemoMenu" />
 </navigation>
