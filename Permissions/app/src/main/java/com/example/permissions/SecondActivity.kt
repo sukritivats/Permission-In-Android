@@ -37,6 +37,11 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+        binding?.activityThird?.setOnClickListener(){
+            startActivity(Intent(this,ThirdActivity::class.java))
+        }
+
+
         binding?.btnPdf?.setOnClickListener {
             if (checkPermission()) {
                 pickPdfFile()
@@ -138,13 +143,13 @@ class SecondActivity : AppCompatActivity() {
 //    }
 
     private fun displayPdf(pdfUri: Uri) {
-       val webView: WebView = findViewById(R.id.WebView)
-    webView.settings.javaScriptEnabled = true
+        val webView: WebView = findViewById(R.id.WebView)
+        webView.settings.javaScriptEnabled = true
 
-    webView.webViewClient = WebViewClient()
+        webView.webViewClient = WebViewClient()
 
-    // Load the PDF file into the WebView
-    webView.loadUrl("file:///android_asset/pdfviewer/viewer.html?file=$pdfUri")
+        // Load the PDF file into the WebView
+        webView.loadUrl("file:///android_asset/pdfviewer/viewer.html?file=$pdfUri")
     }
 
 

@@ -32,9 +32,20 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Loaction"
+        android:id="@+id/btnLocation"
         app:layout_constraintStart_toStartOf="parent"
-        android:id="@+id/btnLocation"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Third Activity"
+        android:id="@+id/activityThird"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

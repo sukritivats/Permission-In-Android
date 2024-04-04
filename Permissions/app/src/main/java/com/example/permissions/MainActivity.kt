@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     @SuppressLint("NotifyDataSetChanged")
+    // TakePicture
     private val requestCameraLauncher= registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val imageBitmap = result.data?.extras?.get("data") as Bitmap?
