@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CofferAssignment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+<!--         <item name="colorPrimary">@color/my_light_primary</item>-->
+
+        <item name="android:statusBarColor">@color/appColor</item>
+    </style>
+
+    <style name="Theme.CofferAssignment" parent="Base.Theme.CofferAssignment" />
+    <style name="MyFabShape" parent="">
+        <item name="cornerSize">50%</item> <!-- Adjust the corner size as needed -->
+    </style>
+
+
+</resources>

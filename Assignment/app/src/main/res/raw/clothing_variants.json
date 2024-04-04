@@ -1,0 +1,196 @@
+{
+  "clothing_variants": [
+    {
+      "variant_id": 1,
+      "name": "T-Shirt",
+      "size": "Small",
+      "available_colors": [
+        {
+          "color": "Black",
+          "hex_code": "#000000",
+          "image_url": "https://example.com/black_tshirt_small.jpg"
+        },
+        {
+          "color": "White",
+          "hex_code": "#FFFFFF",
+          "image_url": "https://example.com/white_tshirt_small.jpg"
+        },
+        {
+          "color": "Gray",
+          "hex_code": "#808080",
+          "image_url": "https://example.com/gray_tshirt_small.jpg"
+        }
+      ],
+      "price": 15.99,
+      "quantity": 50
+    },
+    {
+      "variant_id": 2,
+      "name": "T-Shirt",
+      "size": "Medium",
+      "available_colors": [
+        {
+          "color": "Black",
+          "hex_code": "#000000",
+          "image_url": "https://example.com/black_tshirt_medium.jpg"
+        },
+        {
+          "color": "White",
+          "hex_code": "#FFFFFF",
+          "image_url": "https://example.com/white_tshirt_medium.jpg"
+        },
+        {
+          "color": "Blue",
+          "hex_code": "#0000FF",
+          "image_url": "https://example.com/blue_tshirt_medium.jpg"
+        }
+      ],
+      "price": 17.99,
+      "quantity": 40
+    },
+    {
+      "variant_id": 3,
+      "name": "T-Shirt",
+      "size": "Large",
+      "available_colors": [
+        {
+          "color": "Black",
+          "hex_code": "#000000",
+          "image_url": "https://example.com/black_tshirt_large.jpg"
+        },
+        {
+          "color": "White",
+          "hex_code": "#FFFFFF",
+          "image_url": "https://example.com/white_tshirt_large.jpg"
+        },
+        {
+          "color": "Red",
+          "hex_code": "#FF0000",
+          "image_url": "https://example.com/red_tshirt_large.jpg"
+        }
+      ],
+      "price": 19.99,
+      "quantity": 30
+    },
+    {
+      "variant_id": 4,
+      "name": "Hoodie",
+      "size": "Small",
+      "available_colors": [
+        {
+          "color": "Gray",
+          "hex_code": "#808080",
+          "image_url": "https://example.com/gray_hoodie_small.jpg"
+        },
+        {
+          "color": "Blue",
+          "hex_code": "#0000FF",
+          "image_url": "https://example.com/blue_hoodie_small.jpg"
+        },
+        {
+          "color": "Red",
+          "hex_code": "#FF0000",
+          "image_url": "https://example.com/red_hoodie_small.jpg"
+        }
+      ],
+      "price": 29.99,
+      "quantity": 20
+    },
+    {
+      "variant_id": 5,
+      "name": "Hoodie",
+      "size": "Medium",
+      "available_colors": [
+        {
+          "color": "Black",
+          "hex_code": "#000000",
+          "image_url": "https://example.com/black_hoodie_medium.jpg"
+        },
+        {
+          "color": "Green",
+          "hex_code": "#008000",
+          "image_url": "https://example.com/green_hoodie_medium.jpg"
+        },
+        {
+          "color": "Yellow",
+          "hex_code": "#FFFF00",
+          "image_url": "https://example.com/yellow_hoodie_medium.jpg"
+        }
+      ],
+      "price": 34.99,
+      "quantity": 25
+    },
+    {
+      "variant_id": 6,
+      "name": "Hoodie",
+      "size": "Large",
+      "available_colors": [
+        {
+          "color": "White",
+          "hex_code": "#FFFFFF",
+          "image_url": "https://example.com/white_hoodie_large.jpg"
+        },
+        {
+          "color": "Orange",
+          "hex_code": "#FFA500",
+          "image_url": "https://example.com/orange_hoodie_large.jpg"
+        },
+        {
+          "color": "Purple",
+          "hex_code": "#800080",
+          "image_url": "https://example.com/purple_hoodie_large.jpg"
+        }
+      ],
+      "price": 39.99,
+      "quantity": 30
+    },
+    {
+      "variant_id": 7,
+      "name": "Jeans",
+      "size": "30W x 32L",
+      "available_colors": [
+        {
+          "color": "Blue",
+          "hex_code": "#0000FF",
+          "image_url": "https://example.com/blue_jeans_30Wx32L.jpg"
+        },
+        {
+          "color": "Black",
+          "hex_code": "#000000",
+          "image_url": "https://example.com/black_jeans_30Wx32L.jpg"
+        },
+        {
+          "color": "Brown",
+          "hex_code": "#A52A2A",
+          "image_url": "https://example.com/brown_jeans_30Wx32L.jpg"
+        }
+      ],
+      "price": 49.99,
+      "quantity": 15
+    },
+    {
+      "variant_id": 8,
+      "name": "Jeans",
+      "size": "32W x 34L",
+      "available_colors": [
+        {
+          "color": "Black",
+          "hex_code": "#000000",
+          "image_url": "https://example.com/black_jeans_32Wx34L.jpg"
+        },
+        {
+          "color": "Gray",
+          "hex_code": "#808080",
+          "image_url": "https://example.com/gray_jeans_32Wx34L.jpg"
+        },
+        {
+          "color": "Green",
+          "hex_code": "#008000",
+          "image_url": "https://example.com/green_jeans_32Wx34L.jpg"
+        }
+      ],
+      "price": 54.99,
+      "quantity": 20
+    }
+  ]
+}

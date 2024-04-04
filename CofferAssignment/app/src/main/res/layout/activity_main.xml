@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="start">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="?attr/actionBarSize"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:background="@color/appColor"
+           android:padding="7dp"
+           android:paddingStart="15dp"
+           android:paddingEnd="15dp"
+           android:id="@+id/clActionBar"
+           >
+           <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:src="@drawable/drawer_icon"
+               android:id="@+id/ivDrawer"/>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toEndOf="@id/ivDrawer"
+               android:layout_marginTop="5dp"
+               android:text="Howdy SUKRITI VATS!!"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+               android:layout_marginStart="20dp"
+               android:id="@+id/tvUserName"/>
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               app:layout_constraintTop_toBottomOf="@id/tvUserName"
+               app:layout_constraintStart_toEndOf="@id/ivDrawer"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"
+               android:layout_marginStart="15dp"
+               android:id="@+id/llLocation"
+               >
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="20dp"
+                   android:src="@drawable/location_icon"
+                   />
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Sector 59 Mohali"
+                   android:textSize="14sp"
+                   android:textColor="@color/white"
+                   android:id="@+id/tvUserLocation"/>
+           </LinearLayout>
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="50dp"
+               android:layout_height="wrap_content"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="@id/tvUserName"
+               android:src="@drawable/refine_icon"
+               android:id="@+id/ivRefine"/>
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="50dp"
+               android:layout_height="wrap_content"
+               android:text="Refine"
+               android:layout_marginTop="-7dp"
+               app:layout_constraintTop_toBottomOf="@id/ivRefine"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintBottom_toBottomOf="@id/llLocation"
+               android:textColor="@color/white"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.fragment.app.FragmentContainerView
+           android:id="@+id/fragmentContainerView"
+           android:name="androidx.navigation.fragment.NavHostFragment"
+           app:layout_constraintTop_toBottomOf="@id/clActionBar"
+           app:layout_constraintBottom_toTopOf="@id/btmNavigation"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           app:defaultNavHost="true"
+           app:navGraph="@navigation/nav_graph"/>
+
+       <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+       <!--        android:layout_width="match_parent"-->
+       <!--        android:layout_height="64dp"-->
+       <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+       <!--        android:background="@color/white"-->
+       <!--        android:id="@+id/btmNavigation"-->
+       <!--        app:menu="@menu/btm_nav_menu"-->
+       <!--        />-->
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="65dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           android:background="@color/white"
+           android:orientation="horizontal"
+           android:weightSum="5"
+           android:id="@+id/btmNavigation"
+           >
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:layout_weight="1"
+               android:gravity="center"
+               android:id="@+id/llExplore">
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/explore_icon"/>
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Explore"
+                   android:textColor="@color/appColor"
+                   android:textSize="12sp"/>
+
+
+           </LinearLayout><LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:layout_weight="1"
+           android:gravity="center">
+           <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/network_icon"
+               android:tint="@color/lightDullColor"/>
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Network"
+               android:textColor="@color/lightDullColor"
+               android:textSize="12sp"/>
+
+
+       </LinearLayout><LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:layout_weight="1"
+           android:gravity="center">
+           <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/chat_icon"
+               android:tint="@color/lightDullColor"/>
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Chat"
+               android:textColor="@color/lightDullColor"
+               android:textSize="12sp"/>
+
+
+       </LinearLayout><LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:layout_weight="1"
+           android:gravity="center">
+           <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/contact_icon"
+               android:tint="@color/lightDullColor"/>
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Contacts"
+               android:textColor="@color/lightDullColor"
+               android:textSize="12sp"/>
+
+
+       </LinearLayout><LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:layout_weight="1"
+           android:gravity="center">
+           <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/group_icon"
+               android:tint="@color/lightDullColor"/>
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Groups"
+               android:textColor="@color/lightDullColor"
+               android:textSize="12sp"/>
+
+       </LinearLayout>
+
+       </LinearLayout>
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:itemIconTint="#181E43"
+        app:itemTextColor="@color/appColor"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/nav_header"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>

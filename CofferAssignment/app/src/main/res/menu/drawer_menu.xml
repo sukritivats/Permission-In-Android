@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:title="My Profile"
+            android:id="@+id/navProfile"
+            android:icon="@drawable/baseline_person_outline_24"
+            />
+        <item
+            android:title="My Network"
+            android:id="@+id/navNetwork"
+            android:icon="@drawable/network_icon"
+            />
+        <item
+            android:title="Switch to Business"
+            android:id="@+id/navBusiness"
+            android:icon="@drawable/business"
+            />
+        <item
+            android:title="Switch to Merchant"
+            android:id="@+id/navMerchant"
+            android:icon="@drawable/merchant"
+            />
+        <item
+            android:title="Switch to Dating"
+            android:id="@+id/navDating"
+            android:icon="@drawable/dating"
+            />
+        <item
+            android:title="Matrimony"
+            android:id="@+id/navMatrimony"
+            android:icon="@drawable/matrimony"
+            />
+        <item
+            android:title="Buy-Sell-Rent"
+            android:id="@+id/navSelf"
+            android:icon="@drawable/buy_sell_rent"
+            />
+        <item
+            android:title="Jobs"
+            android:id="@+id/navJobs"
+            android:icon="@drawable/job"
+            />
+        <item
+            android:title="Business Cards"
+            android:id="@+id/navCards"
+            android:icon="@drawable/business_card"
+            />
+        <item
+            android:title="Netclan Groups"
+            android:id="@+id/navGroups"
+            android:icon="@drawable/group_icon"
+            />
+        <item
+            android:title="Notes"
+            android:id="@+id/navNotes"
+            android:icon="@drawable/notes"
+            />
+        <item
+            android:title="Live Location"
+            android:id="@+id/navLocation"
+            android:icon="@drawable/location_icon"
+            />
+
+
+
+
+</menu>

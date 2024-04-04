@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentRefine">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/appColor"
+                android:padding="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPrev"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/baseline_arrow_back_ios_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Refine"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivPrev"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Select Your Availability"
+                android:textSize="14sp"
+                android:textColor="@color/appColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clActionBar" />
+
+
+            <LinearLayout
+                android:id="@+id/spinnerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_rect_box"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectAvailability">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectAvailability" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Add Your Status"
+                android:textColor="@color/appColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinnerContainer" />
+
+            <LinearLayout
+                android:id="@+id/llStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_rect_box"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tvStatus">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appColor"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="20dp"
+                    android:text='Hi community! I am open to new connections "😊"'
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0/250"
+                android:textSize="12sp"
+                android:textColor="@color/appColor"
+                app:layout_constraintEnd_toEndOf="@id/llStatus"
+                app:layout_constraintTop_toBottomOf="@id/llStatus" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Select Hyper Local Distance"
+                android:textSize="14sp"
+                android:textColor="@color/appColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llStatus" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tvDistance">
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:thumbTint="@color/appColor"
+                    app:layout_constraintTop_toBottomOf="@id/textView" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/seekBar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/seekbar_text_icon"
+                    android:backgroundTint="#181E43"
+                    android:text="1"
+                    android:textColor="@color/appColor"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/seekBar"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv1Km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Km"
+                android:textColor="@color/appColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/clSeekbar"
+                app:layout_constraintTop_toBottomOf="@id/clSeekbar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 Km"
+                android:textColor="@color/appColor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/clSeekbar"
+                app:layout_constraintTop_toBottomOf="@id/clSeekbar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectPurpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Select Purpose"
+                android:textColor="@color/appColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/clSeekbar"
+                app:layout_constraintTop_toBottomOf="@id/tv1Km" />
+
+            <LinearLayout
+                android:id="@+id/llPurpose1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/tvSelectPurpose"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectPurpose">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCoffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_purpose"
+                    android:textColor="@color/appColor"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:paddingEnd="20dp"
+                    android:text="Coffee"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBusiness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/bg_purpose"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:textColor="@color/appColor"
+                    android:paddingEnd="20dp"
+                    android:text="Business"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHobbies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/bg_purpose"
+                    android:textColor="@color/appColor"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:paddingEnd="20dp"
+                    android:text="Hobbies"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPurpose2"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textColor="@color/appColor"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/llPurpose1"
+                app:layout_constraintTop_toBottomOf="@id/llPurpose1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFriendship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_purpose"
+                    android:clickable="true"
+                    android:textColor="@color/appColor"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:paddingEnd="20dp"
+                    android:text="Friendship"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMovies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/bg_purpose"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:paddingEnd="20dp"
+                    android:text="Movies"
+                    android:textColor="@color/appColor"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDinning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/bg_purpose"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:paddingEnd="20dp"
+                    android:text="Dinning"
+                    android:textColor="@color/appColor"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPurpose3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/llPurpose2"
+                app:layout_constraintTop_toBottomOf="@id/llPurpose2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_purpose"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onPurposeClicked"
+                    android:padding="10dp"
+                    android:paddingEnd="20dp"
+                    android:text="Dating"
+                    android:textColor="@color/appColor"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMatrimony"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/bg_purpose"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onPurposeClicked"
+                    android:padding="10dp"
+                    android:paddingEnd="20dp"
+                    android:text="Matrimony"
+                    android:textColor="@color/appColor"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveExplore"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_purpose"
+                android:backgroundTint="#181E43"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="Save &amp; Explore"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llPurpose3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

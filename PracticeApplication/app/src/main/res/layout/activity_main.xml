@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="60dp"
+    android:orientation="vertical"
+    android:background="#C9ECE9">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="20sp"
+        android:layout_marginTop="100dp"
+        android:id="@+id/tvSignIn"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your details"
+        android:textSize="14sp"
+        android:id="@+id/tvDetails"
+        android:textColor="#ACA2A2"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Id"
+        android:layout_marginTop="30dp"
+        android:id="@+id/etEmail"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:layout_marginTop="30dp"
+        android:id="@+id/etPhone"
+        android:visibility="gone"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:id="@+id/etPassword"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_marginTop="30dp"
+        android:id="@+id/btnContinue"
+        android:background="@drawable/box_shape"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with Phone"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:id="@+id/tvContinuePhone"
+        android:clickable="true"
+        android:focusable="true"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with Email"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvContinueEmail"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

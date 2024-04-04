@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CofferAssignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="Hello_com">Hi community! I am open to new \n connections "😊"</string>
+    <string name="status">I am Passionate Android Developer. My name is Deepak Prahaar. I have hands on experience in Kotlin, Android, Firebase and core android stuffs. </string>
+</resources>
